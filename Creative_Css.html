@@ -1,0 +1,186 @@
+<section class="body">
+  <section class="span">
+  <div class="a"></div>
+  <div class="b"></div>
+  <div class="c"></div>
+  <div class="d"></div>
+  <div class="e"></div>
+  <div class="f"></div>
+  <div class="g"></div>
+  <div class="h"></div>
+  <div class="i"></div>
+  <div class="an"></div>
+  <div class="j"></div>
+  <div class="k"></div>
+  <div class="l"></div>
+  <div class="m"></div>
+  <div class="n"></div>
+  <div class="o"></div>
+</section>
+ <section class="nav">
+    <div class="a"></div>
+    <div class="b"></div>
+    <div class="c"></div>
+    <div class="d"></div>
+    <div class="e"></div>
+    <div class="f"></div>
+    <div class="g"></div>
+    <div class="h"></div>
+    <div class="i"></div>
+    <div class="an"></div>
+    <div class="j"></div>
+    <div class="k"></div>
+    <div class="l"></div>
+    <div class="m"></div>
+    <div class="n"></div>
+    <div class="o"></div>
+ </section>
+</section>
+<style>
+  *{
+  margin: 0;
+  padding: 0;
+  background: #acf908;
+}
+.body{
+  height: 500px;
+  width: 250%;
+  margin-left:0%;
+  display: inline-flex;
+  overflow: scroll;
+}
+.span{
+  width: 350px;
+  height: 350px;
+  position: relative;
+  float: left;
+  display: flex;
+  margin-top:20%;
+  background: #99A20000;
+  margin-left:0;
+}
+.nav{
+    width: 350px;
+    height: 350px;
+    position: relative;
+    float: right;
+    display: flex;
+    margin-top: 20%;
+    background: #99A20000;
+    margin-left: 0;
+}
+div{
+  position: absolute;
+  display: flex;
+  box-sizing: border-box;
+  border:#fff solid 3px;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  transform: perspective(200px) rotateZ(30deg);
+  animation: anime 1s ease-in-out infinite;
+  box-shadow: 0px 3px 0px #ccb , inset 0px 3px 0px #ccb;
+}
+.a{
+  margin: 80px;
+  height: 140px;
+  width: 140px;
+  animation-delay: 0.8s;
+}
+.b{
+  height: 300px;
+  width: 300px;
+  animation-delay: 0s;
+}
+.c{
+  margin: 10px;
+  height: 280px;
+  width: 280px;
+  animation-delay: 0.1s;
+}
+.d{
+  margin: 20px;
+  height: 260px;
+  width: 260px;
+  animation-delay: 0.2s;
+}
+.e{
+  margin: 30px;
+  height: 240px;
+  width: 240px;
+  animation-delay: 0.3s;
+}
+.f{
+  margin: 40px;
+  height: 220px;
+  width: 220px;
+  animation-delay: 0.4s;
+}
+.g{
+  margin: 50px;
+  height: 200px;
+  width: 200px;
+  animation-delay: 0.5s;
+}
+.h{
+  margin: 60px;
+  height: 180px;
+  width: 180px;
+  animation-delay: 0.6s;
+}
+.i{
+  margin: 70px;
+  height: 160px;
+  width: 160px;
+  animation-delay: 0.7s;
+}
+.an{
+ margin: 80px;
+ height: 140px;
+ width: 140px;
+ animation-delay: 0.8s;
+}
+.j{
+  margin: 90px;
+  height: 120px;
+  width: 120px;
+  animation-delay: 0.9s;
+}
+.k{
+  margin: 100px;
+  height: 100px;
+  width: 100px;
+  animation-delay: 1s;
+}
+.l{
+  margin: 110px;
+  height: 80px;
+  width: 80px;
+  animation-delay: 1.1s;
+}
+.m{
+  margin: 120px;
+  height: 60px;
+  width: 60px;
+  animation-delay: 1.2s;
+}
+.n{
+  margin: 130px;
+  height: 40px;
+  width: 40px;
+  animation-delay: 1.3s;
+}
+.o{
+  margin: 140px;
+  height: 20px;
+  width: 20px;
+  animation-delay: 1.4s;
+}
+@keyframes anime{
+  0%,100%,50%{
+    transform: translateZ(0) perspective(500px) rotate3d(10,6,8,90deg);
+  }
+  25%,75%{
+    transform: translateZ(100px) perspective(0px) rotate3d(22,24,21,-90deg); 
+  }
+}
+</style>
