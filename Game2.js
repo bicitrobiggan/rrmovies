@@ -191,7 +191,7 @@ document.getElementById("score").innerHTML = "Your score : "+ score ;
   }
  // console.log(Math.floor(Math.abs(Math.cos(cl1))*255),cl1);
   function enemy(Ex,Ey,Eh,Ew){
-    square(canvas.width-Ex,Ey,Eh,Ew,"purple");
+    square(canvas.width-Ex,Ey,Eh,Ew,"rgb(200,200,255)");
   }
 var Audio = document.getElementById("Music");
 function playMusic(){
