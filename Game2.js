@@ -51,7 +51,7 @@ Play.onclick = function(){
   function control(){
     
     var img = new Image();
-img.src = "...\night.png";
+    img.src = "Night-Stars-Png-Clip-Art-Library-lEeJcl2T5tunfM.png";
     img.onload = function(){
 ctx.drawImage(img,0,0,canvas.width,canvas.height);
 if (enemyX > canvas.width || enemy2X > canvas.width) {
@@ -101,7 +101,7 @@ document.getElementById("score").innerHTML = "Your score : "+ score ;
           enemyW -= 1.5;
           score += 1;
         }
-        else {
+        else { 
           enemyX++;
         }
       }
