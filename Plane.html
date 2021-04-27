@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plane</title>
+</head>
+<style type="text/css" media="all">
+*{
+  margin: 1px;
+  padding: 1px;
+}
+#body{
+  display:none;
+}
+#start,#restart{
+  display: block;
+  position: relative;
+  margin: 5px auto;
+  padding: 5px;
+  font-size: 25px;
+  height: auto;
+  width: auto;
+  font-weight: bolder;
+  border-radius: 10px;
+}
+.Adc{
+  display: none;
+}
+  button{
+    height: 50px;
+    padding: 5px;
+    width: 100px;
+    margin: 5px 0;
+    font-size: 20px;
+  }
+  label{
+    font-weight: bold;
+  }
+</style>
+<body>
+  <audio id="Music" src="'Tu Jo Mila' VIDEO Song - K.K. Pritam | Salman Khan, Nawazuddin, Harshaali | Bajrangi Bhaijaan.mp3"></audio>
+  <h3><b id="score"></b><b style="float: right;" id="time"></b></h3>
+  <h3 id="Total"></h3>
+<div id="body">
+  <label for="Life">Life : </label><progress max="100" value="100"></progress>
+  <canvas id="Canvas" width="350" height="300"></canvas>
+  <button>Back</button>
+  <button style="float: right;">Up</button>
+  <br />
+  <button>Front</button>
+  <button style="float: right;">Down</button>
+</div>
+<button id="start">Start</button>
+<button class="Adc">Mute</button>
+<button class="Adc">Play</button>
+<button id="restart" style="display:none;">Restart</button>
+</body>
+<script src="Ds.js"></script>
+<script src="Plane.js"></script>
+<script src="Game2.js" type="text/javascript" charset="utf-8"></script>
+</html>
