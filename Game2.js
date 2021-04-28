@@ -30,7 +30,9 @@ var Mute = document.getElementsByClassName("Adc")[0];
 var Play = document.getElementsByClassName("Adc")[1];
 var lfPrgs = document.getElementsByTagName("progress")[0];
 
-
+var img = new Image();
+    img.src = "Night-Stars-Png-Clip-Art-Library-lEeJcl2T5tunfM_copy_384x216.png";
+    img.onload = function(){
  document.getElementById("start").onclick = function() {
    
    playMusic();
@@ -50,9 +52,6 @@ Play.onclick = function(){
 
   function control(){
     
-    var img = new Image();
-    img.src = "Night-Stars-Png-Clip-Art-Library-lEeJcl2T5tunfM_copy_384x216.png";
-    img.onload = function(){
 ctx.drawImage(img,0,0,canvas.width,canvas.height);
 if (enemyX > canvas.width || enemy2X > canvas.width) {
   life = 50;
