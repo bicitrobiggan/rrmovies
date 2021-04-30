@@ -1,6 +1,5 @@
 var canvas = document.getElementById("Canvas");
 var ctx= canvas.getContext('2d');
-console.log("Window loaded");
 var cl1 = Math.floor(Math.random()*255);
 var cl2 = Math.floor(Math.random()*255);
 var cl3 = Math.floor(Math.random()*255);
