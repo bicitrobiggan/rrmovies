@@ -1,0 +1,66 @@
+body{
+  background: #001;
+  color: #fff;
+}
+img{
+  position: absolute;
+  height: 40vw;
+  width: 40vw;
+  z-index: 1;
+}
+#name{
+  text-align: center;
+  text-transform: uppercase;
+  font-style: italic;
+  font-family: monospace;
+  font-weight: 800;
+  font-size: 5.55vw;
+  position: relative;
+  animation: light infinite ease-in-out 3s;
+}
+.info{
+  position: absolute;
+  z-index: 10;
+  margin-top: 40vw;
+}
+h1{
+  font-size: 10vw;
+  color: #fff;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+  position: relative;
+  text-shadow: 2px 2px 2px #000;
+}
+.span{
+  display: inline-block;
+ animation: light infinite 3s;
+}
+.banner{
+  display: inline-flex;
+  height: 10vw;
+  width: 10vw;
+  background: radial-gradient(#fff 30%,transparent 70%);
+  clip-path: polygon(50% 0, 50% 50%, 100% 50%, 50% 50%, 50% 100%, 50% 50%, 0% 50%, 50% 50%);
+  animation: anime 2s infinite ease-in-out;
+}
+@keyframes anime{
+  0%,100%{
+  clip-path: polygon(50% 0, 55% 45%, 100% 50%, 55% 55%, 50% 100%, 45% 55%, 0% 50%, 45% 45%);
+  }
+  30%,70%{
+    clip-path: polygon(50% 0, 50% 50%, 100% 50%, 50% 50%, 50% 100%, 50% 50%, 0% 50%, 50% 50%);
+  }
+}
+@keyframes light{
+  0%,100%{
+    text-shadow: 
+    2px 2px 5px #fff,
+    -2px 2px 5px #fff,
+    -2px -2px 5px #fff,
+    2px -2px 5px #fff;
+  }
+  50%{
+    text-shadow: 0px 0px 10px #fff;
+  }
+}
