@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+  background-size: contain;
+  background-position: center;
+}
+
+.id {
+  text-align: center;
+}
+
+.container {
+  background: #2229;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+
+.imgCont {
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  height: 60vw;
+  max-width: 600px;
+  max-height: 600px;
+  border: outset #999 1vw;
+  border-radius: 50%;
+  animation: rotar infinite 7s linear;
+  animation-play-state: paused;
+}
+
+.control {
+  background: transparent;
+  backdrop-filter: brightness(80%) blur(5px);
+  width: 80vw;
+  height: 40vw;
+  max-width: 840px;
+  max-height: 420px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 2vw;
+}
+
+.container.pc .imgCont {
+  width: 60vh;
+  height: 60vh;
+}
+
+.container.pc .control {
+  width: 80vh;
+  height: 40vh;
+}
+
+@keyframes rotar {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  50% {
+    transform: rotateZ(180deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.btn{
+  margin: 5%;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.playbtn {
+  margin: 5%; 
+  height: 8vw; 
+  width: 8vw; 
+  color: transparent;
+  background: #fff;
+}
+
+#playbtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  width: 15vw;
+  height: 15vw;
+}
+.loopBtn {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  color: #fff;
+}
+#loop{
+  color: #7C7C7C;
+  font-size: 180%;
+  padding: 5%;
+  transition: 0.1s;
+  background: none;
+}

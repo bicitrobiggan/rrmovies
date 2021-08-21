@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<!--Created by Maruf Hasan (Bangladesh) -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Triple Click</title>
+</head>
+
+<body>
+</body>
+<script>
+  let Click = 0;
+  window.addEventListener("click", function() {
+    Click++;
+    if (Click == 3) {
+      alert("you clicked for " + Click + " times");
+    }
+    setTimeout(reduce, 1500);
+    //console.log(Click);
+  });
+
+  function reduce() {
+    Click = 0;
+    //console.log(Click);
+  }
+</script>
+
+</html>

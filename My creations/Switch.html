@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+
+<body>
+<div class="switchContainer">
+  <div class="switch">
+   <div class="switchLight"></div>
+  </div>
+    <div id="switchTxt">Off</div>
+</div>
+</body>
+<script type="text/javascript" charset="utf-8">
+  var Switch = document.querySelectorAll(".switch")[0];
+  var switchTxt = document.querySelector("#switchTxt");
+  
+  Switch.addEventListener("click",function(){
+    if(Switch.getAttribute("class")==="switch"){
+      this.classList.toggle("active",true);
+      switchTxt.innerHTML = "On";
+      switchTxt.style.transform = "translateX(0%)";
+    }
+    else{
+      this.classList.toggle("active",false);
+      switchTxt.innerHTML = "Off";
+      switchTxt.style.transform = "translateX(320%)";
+    }
+  });
+</script>
+<style type="text/css" media="all">
+*{
+  transition: 0.5s;
+}
+  body{
+    background: #333;
+  }
+ .switchContainer{
+   height: 50px;
+   width: 160px;
+   border-radius: 25px;
+   background: #777;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: nowrap;
+   flex-direction: row;
+   border: #555 outset 5px;
+ }
+ .switch{
+   height: 50px;
+   width: 60px;
+   border-radius: 20.5px;
+   background: #aaa;
+   margin-left: 0;
+   color: red;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 1;
+ }
+ .switch.active{
+   margin-left: 62.5%;
+ }
+ .switchLight{
+   height: 5px;
+   width: 5px;
+   border-radius: 2.5px;
+   background: #f00;
+   box-shadow: 0 0 0 0.5px #f00,
+               0 0 2px #f00,
+               0 0 4px #f00,
+               0 0 6px #f00;
+ }
+ .switch.active .switchLight{
+   background: #0f0;
+   box-shadow: 0 0 0 0.5px #0f0,
+   0 0 2px #0f0,
+   0 0 4px #0f0,
+   0 0 6px #0f0;
+ }
+ #switchTxt{
+   position: absolute;
+   transform: translateX(320%);
+   margin: 20px;
+   color: #fff;
+   font-size: 20px;
+   font-weight: 600;
+   text-shadow: 0 0 5px #fff;
+ }
+</style>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keyboard</title>
+</head>
+<body>
+<h1 style="text-align: center">Mobile Keyboard</h1>
+<p id="txt"></p>
+<div class="board">1234567890
+'"\/:;_</div>
+  <div class="board">
+    <span class="key">q</span>
+    <span class="key">w</span>
+    <span class="key">e</span>
+    <span class="key">r</span>
+    <span class="key">t</span>
+    <span class="key">y</span>
+    <span class="key">u</span>
+    <span class="key">i</span>
+    <span class="key">o</span>
+    <span class="key">p</span>
+    <span class="key">a</span>
+    <span class="key">s</span>
+    <span class="key">d</span>
+    <span class="key">f</span>
+    <span class="key">g</span>
+    <span class="key">h</span>
+    <span class="key">j</span>
+    <span class="key">k</span>
+    <span class="key">l</span>
+    <span class="key">z</span>
+    <span class="key">x</span>
+    <span class="key">c</span>
+    <span class="key">v</span>
+    <span class="key">b</span>
+    <span class="key">n</span>
+    <span class="key">m</span>
+    <span class="key">.</span>
+    <span class="key">,</span>
+    <span class="key">!</span>
+    <span class="key">?</span>
+  </div>
+  <div class="board2">
+    <span class="enter" id="shift">Shift</span>
+    <span class="enter">Space</span>
+    <span class="enter">Enter</span>
+    <span class="enter" onclick="en()">Clear</span>
+  </div>
+</body>
+<script src="Keyboard.js" type="text/javascript" charset="utf-8">
+</script>
+<style type="text/css" media="all">
+  .board,
+  .board2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35px, 1fr));
+    align-items: center;
+    justify-content: space-around;
+    background: #00BAFF;
+    font-size: 25px;
+    font-weight: 500;
+    max-width: 96vw;
+    bottom: 0vw;
+    position: relative;
+    z-index: 10;
+  }
+@media( min-width: 720px){
+  .board,
+  .board2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  }
+}
+  .board.active,
+  .enter.active {
+    text-transform: uppercase;
+  }
+  .key,
+  .enter {
+    background: #006B92;
+    color: #fff;
+    margin: 0.5vw;
+    padding: 0.5vw;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+.enter.deactive{
+  background-color: #424DBD;
+  color: #ddd;
+  transition: 0.3s;
+}
+  .key:hover,
+  .enter:hover {
+    animation: keypress ease-in-out 0.3s forwards;
+  }
+
+  @keyframes keypress {
+    0% {
+      background: #32C7FF;
+      color: #000000;
+    }
+
+    100% {
+      background: #006B92;
+      color: #fff;
+    }
+  }
+
+  #txt{
+    margin: 1vw;
+    max-width: 98vw;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+</style>
+
+</html>

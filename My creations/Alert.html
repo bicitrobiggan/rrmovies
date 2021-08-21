@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Custom alert</title>
+<script>
+window.onload = function(){
+  var p = document.getElementById('described').offsetHeight;
+  var lenth = (screen.height/4)-(p/2);
+  //console.log(lenth);
+document.getElementById("alertbox").style.marginTop = lenth+"px";
+document.getElementById('btn1').onclick = aa;
+function aa(){
+  document.getElementById('alertbox').style.display = "none";
+  document.getElementById('body').style.display = "block";
+  //alert('Real alert')
+}
+}
+</script>
+</head>
+<style type="text/css" media="all">
+  #alertbox{
+    display: block;
+    position: fixed;
+    width: 80%;
+    margin-left:5%;
+    margin-right:5%;
+    height: auto;
+    padding: 10px;
+    text-align: right;
+    background: peachpuff;
+    border-radius: 10px;
+    border: groove 3px #00FFF8;
+    animation: tre 0.3s 1 ease-in-out ;
+    box-shadow: 1px 1px 10px #888888;
+  }
+  #body{
+    display: none;
+  }
+@keyframes tre{
+  0%{
+   opacity: 0%;
+   transform: translateY(-50%); 
+  }
+  90%{
+    opacity: 40%;
+    transform: translateY(10%);
+  }
+  100%{
+    opacity: 100%;
+    transform: translateY(0%);
+  }
+}
+  #described{
+    text-align: justify;
+  }
+  #title{
+    text-align: center;
+    padding: 0px;
+  }
+  #btn1{
+    border-radius: 5px;
+    border: solid #8E7603 2px;
+    background: #456E22;
+    font-size: 16px;
+    color: #fff;
+  }
+ #alertbox img{
+   height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto 0 auto;
+   width: auto;
+   border-radius: 5px;
+ }
+</style>
+  <!--alertBox-->
+<div id="alertbox">
+  <h1 id="title">Title</h1>
+    <img src="" alt="" />
+  <p id="described">Discription</p>
+  <button id="btn1">Ok</button>
+</div>
+<!--alertBox End-->
+<div id="body">
+<!--Write your all body(text,img,vedio etc. here-->
+body
+</div>
+</body>
+</html>

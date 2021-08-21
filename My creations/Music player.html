@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Music Player</title>
+</head>
+<link rel="stylesheet" href="Music player.css">
+<body>
+  <audio id="music" src="" loop autoplay></audio>
+<div class="container">
+  <div class="imgCont"><div style="height: 30%; width: 30%; border-radius :50%; background : radial-gradient(#999 30%,#fff 20%, #555 40%, #222 60%); border: inset #fff 2px;"></div></div>
+  <div style="display: flex; align-items: flex-end; color: #fff;">
+    <label for="duration" id="drlblsrt">0:00:000</label>
+     <input name="duration" style="width: 60vw; margin: 0 2vw;" type="range" id="duration" value="0"><label for="duration" id="drlblend">0:00:000</label>
+  </div>
+  <div class="control">
+    <div class="btn">
+    <input style="clip-path: polygon(20% 0, 20% 50%, 100% 0, 100% 100%, 20% 50%, 20% 100%, 0 100%, 0 0);" type="button" class="playbtn" id="previous" value="">
+    <input type="button" class="playbtn" id="previous_10" style="clip-path: polygon(50% 50%, 100% 0, 100% 100%, 50% 50%, 50% 100%, 0 50%, 50% 0); border: none;">
+    <div id="playbtn">
+    <input style="clip-path: polygon(75% 0, 75% 0, 0 52%, 75% 100%, 75% 100%);" type="button" class="playbtn" id="playFont" /></div>
+    <input type="button" class="playbtn" id="next_10" value="" style="clip-path: polygon(50% 0, 100% 50%, 50% 100%, 50% 50%, 0 100%, 0 0, 50% 50%); border: none" />
+    <input style="clip-path: polygon(80% 50%, 80% 0, 100% 0, 100% 100%, 80% 100%, 80% 50%, 0 100%, 0 0);" type="button" class="playbtn" id="next" value="">
+    </div>
+    <div class="loopBtn">
+      <div id="loop" class="loop">&#x221E;</div>
+      <div class="loop">
+      <label for="volume">&#128263;</label>
+      <input id="volume" name="volume" min="0" max="100" type="range" />
+      <label for="volume">&#128266;</label>
+    </div>
+  </div>
+</div>
+<script src="Music player.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

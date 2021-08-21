@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>img Compiler</title>
+</head>
+<body>
+<div class="banner"></div>
+
+</body>
+<script type="text/javascript" charset="utf-8">
+  const banner = document.querySelector(".banner");
+  const books = document.getElementsByClassName("books");
+  for(var i = 0;i<100;i++){
+    banner.innerHTML += "<div class='books'></div>"
+    books[i].style.animationDelay = 100*100*Math.random()+"ms";
+  }
+</script>
+<style type="text/css" media="all">
+*{
+  margin: 0;
+  padding: 0;
+  transition: 1s;
+}
+ .banner{
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+ }
+.books{
+  height: 10vh;
+  width: 10vw;
+  opacity: 0;
+  background: url("Bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  animation: fall forwards ease-in-out 3s;
+}
+@keyframes fall{
+  0%{
+    opacity: 0;
+    transform: translateX(-100vh) translateY(-100vh) rotate3d(12,13,45,900deg);
+  }
+  60%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0) translateY(0) rotate3d(1,1,1,0deg);
+  }
+}
+</style>
+</html>
